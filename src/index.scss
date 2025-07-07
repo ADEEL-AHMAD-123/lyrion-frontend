@@ -1,0 +1,14 @@
+@use './styles/base/variables' as *;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $font-primary;
+  background-color: $color-white;
+  color: $color-text-dark;
+  line-height: 1.6;
+}
