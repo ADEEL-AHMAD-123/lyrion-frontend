@@ -1,0 +1,26 @@
+@use '../../../styles/base/variables' as *;
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  background-color: $color-primary-light;
+  color: $color-text-light;
+  border: none;
+  padding: $spacing-xs $spacing-sm;
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  cursor: pointer;
+  box-shadow: $shadow-soft;
+  text-decoration: none;
+  border-radius: $radius-sm;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: lighten($color-primary-light, 5%);
+  }
+}
+.hide-on-mobile {
+  @media (max-width: $breakpoint-tablet) {
+    display: none !important;
+  }
+}

@@ -44,6 +44,9 @@
       li {
         list-style: none;
         position: relative;
+        span{
+          color: $color-white;
+        }
 
         a {
           display: flex;
@@ -67,6 +70,7 @@
             font-size: 1rem;
             opacity: 0.7;
             transition: transform 0.3s ease;
+
           }
         }
 
@@ -77,6 +81,7 @@
             position: absolute;
             top: 100%;
             left: 0;
+
             background-color: $color-primary;
             padding: $spacing-sm 0;
             display: none;
@@ -187,33 +192,10 @@
     }
   }
 
-  .cta {
-    display: flex;
-    align-items: center;
 
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      background-color: $color-primary-light;
-      color: $color-text-light;
-      border: none;
-      padding: $spacing-xs $spacing-sm;
-      font-size: $font-size-sm;
-      font-weight: $font-weight-medium;
-      cursor: pointer;
-      box-shadow: $shadow-soft;
-      border-radius: $radius-sm;
 
-      &:hover {
-        background-color: lighten($color-primary-light, 5%);
-      }
-    }
 
-    .desktop-only {
-      @media (max-width: $breakpoint-tablet) {
-        display: none;
-      }
-    }
+   
 
     .hamburger {
       display: none;
@@ -234,4 +216,3 @@
       }
     }
   }
-}

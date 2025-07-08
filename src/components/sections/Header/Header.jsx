@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; 
+import PrimaryButton from '../../common/primary button/PrimaryButton';
 import './_header.scss';
 
 const Header = () => {
@@ -6,41 +8,44 @@ const Header = () => {
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  const toggleSubmenu = () => setIsSubmenuOpen(!isSubmenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
+  const toggleSubmenu = () => setIsSubmenuOpen(!isSubmenuOpen);
 
   return (
     <header className="site-header">
       <div className="container">
-        <div className="logo">LyrionAI</div>
+        <div className="logo">
+          <Link to="/">LyrionAI</Link>
+        </div>
 
         <nav className={`nav ${isMenuOpen ? 'open' : ''}`}>
           <div className="close-icon" onClick={closeMenu}>×</div>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Features</a></li>
+            <li><Link to="/" onClick={closeMenu}>Home</Link></li>
+            <li><Link to="/about" onClick={closeMenu}>About</Link></li>
+            <li><Link to="/features" onClick={closeMenu}>Features</Link></li>
             <li
               className={`has-submenu ${isSubmenuOpen ? 'open' : ''}`}
-              onClick={() => setIsSubmenuOpen(!isSubmenuOpen)}
+              onClick={toggleSubmenu}
             >
-              <a href="#">
+              <span>
                 Solutions <span className="arrow">⌄</span>
-              </a>
+              </span>
               <ul className={`submenu ${isSubmenuOpen ? 'open' : ''}`}>
-                <li><a href="#">Solution 1</a></li>
-                <li><a href="#">Solution 2</a></li>
-                <li><a href="#">Solution 3</a></li>
+                <li><Link to="/solutions/solution-1" onClick={closeMenu}>Solution 1</Link></li>
+                <li><Link to="/solutions/solution-2" onClick={closeMenu}>Solution 2</Link></li>
+                <li><Link to="/solutions/solution-3" onClick={closeMenu}>Solution 3</Link></li>
               </ul>
             </li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Sign In</a></li>
+            <li><Link to="/pricing" onClick={closeMenu}>Pricing</Link></li>
+            <li><Link to="/contact" onClick={closeMenu}>Contact</Link></li>
+            <li><Link to="/signin" onClick={closeMenu}>Sign In</Link></li>
           </ul>
         </nav>
 
         <div className="cta">
-          <button className="btn-primary desktop-only">Get Started</button>
+        <PrimaryButton text="Get Started" to="/get-started" hideOnMobile />
+
           <div className="hamburger" onClick={toggleMenu}>
             <span className="bar"></span>
             <span className="bar"></span>

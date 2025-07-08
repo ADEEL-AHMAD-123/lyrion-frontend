@@ -1,0 +1,151 @@
+@use '../../styles/base/variables' as *;
+@use '../../styles/base/mixins' as *;
+
+.empower-section {
+  position: relative;
+  background-color: $color-primary;
+  color: $color-white;
+  padding: $spacing-3xl 0;
+  text-align: center;
+  overflow: hidden;
+
+  .empower-pattern {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 0;
+
+    @include tablet {
+      max-height: 200px;
+    }
+
+    @include mobile {
+      max-height: 120px;
+    }
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+
+    @include mobile {
+      width: 90%;
+    }
+  }
+
+  h2 {
+    font-size: $font-size-md;
+    font-weight: $font-weight-semibold;
+    margin-bottom: $spacing-2xl;
+    line-height: 1.4;
+    color: $color-white;
+
+    @include tablet {
+      font-size: 1.5rem;
+      margin-bottom: $spacing-xl;
+    }
+
+    @include mobile {
+      font-size: 1.3rem;
+      margin-bottom: $spacing-lg;
+    }
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $spacing-xl;
+
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: $spacing-lg;
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: $spacing-md;
+    }
+  }
+
+  .feature-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: $radius-md;
+    padding: $spacing-sm;
+    display: flex;
+    align-items: flex-start;
+    gap: $spacing-md;
+    text-align: left;
+    box-shadow: $shadow-soft;
+    transition: all 0.3s ease;
+
+    .icon {
+      color: $color-white;
+      flex-shrink: 0;
+
+      svg {
+        width: 32px;
+        height: 32px;
+
+        @include tablet {
+          width: 28px;
+          height: 28px;
+        }
+
+        @include mobile {
+          width: 26px;
+          height: 26px;
+        }
+      }
+    }
+
+    .text-content {
+      h3 {
+        font-size: $font-size-sm;
+        font-weight: $font-weight-semibold;
+        margin-bottom: $spacing-xs;
+        color: $color-white;
+
+        @include mobile {
+          font-size: $font-size-base;
+        }
+      }
+
+      p {
+        font-size: $font-size-xs;
+        color: $color-text-light;
+        line-height: 1.6;
+
+        @include mobile {
+          font-size: $font-size-sm;
+        }
+      }
+    }
+
+    &:hover {
+      .icon,
+      h3 {
+        color: $color-accent-blue;
+      }
+    }
+
+    @include mobile {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: $spacing-sm $spacing-md;
+      gap: $spacing-sm;
+
+      .icon {
+        margin-bottom: $spacing-xs;
+      }
+    }
+  }
+}
