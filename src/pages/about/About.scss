@@ -3,7 +3,7 @@
 
 .about-cards-section {
   background-color: $color-primary;
-  color: $color-white;
+  color: $color-text-light;
   padding: $spacing-3xl 0;
   display: flex;
   justify-content: center;
@@ -169,7 +169,7 @@
           .number {
             font-size: 0.85rem;
             font-weight: 600;
-            color: $color-white;
+            color: $color-text-light;
 
             .growth {
               font-size: 0.6rem;
@@ -186,7 +186,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          color: $color-white;
+          color: $color-text-light;
         }
       }
     }

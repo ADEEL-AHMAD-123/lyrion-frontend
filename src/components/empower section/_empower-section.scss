@@ -4,7 +4,7 @@
 .empower-section {
   position: relative;
   background-color: $color-primary;
-  color: $color-white;
+  color: $color-text-light;
   padding: $spacing-3xl 0;
   text-align: center;
   overflow: hidden;
@@ -47,7 +47,7 @@
     font-weight: $font-weight-semibold;
     margin-bottom: $spacing-2xl;
     line-height: 1.4;
-    color: $color-white;
+    color: $color-text-light;
 
     @include tablet {
       font-size: 1.5rem;
@@ -88,7 +88,7 @@
     transition: all 0.3s ease;
 
     .icon {
-      color: $color-white;
+      color: $color-text-light;
       flex-shrink: 0;
 
       svg {
@@ -112,7 +112,7 @@
         font-size: $font-size-sm;
         font-weight: $font-weight-semibold;
         margin-bottom: $spacing-xs;
-        color: $color-white;
+        color: $color-text-light;
 
         @include mobile {
           font-size: $font-size-base;
