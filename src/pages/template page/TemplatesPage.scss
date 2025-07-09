@@ -1,0 +1,288 @@
+@use "../../styles/base/variables" as *;
+@use "../../styles/base/mixins" as *;
+
+.template-page {
+  background-color: $color-primary;
+  color: $color-text-light;
+  padding: 10rem 0 5rem 0;
+
+  .hero {
+    text-align: center;
+    width: 40%;
+    margin-inline: auto;
+    margin-bottom: $spacing-2xl;
+
+    @include tablet {
+      width: 60%;
+    }
+
+    @include mobile {
+      width: 90%;
+    }
+
+    h1 {
+      font-size: $font-size-3xl;
+      font-weight: $font-weight-bold;
+
+      @include mobile {
+        font-size: $font-size-xl;
+      }
+    }
+
+    p {
+      font-size: $font-size-sm;
+      line-height: 1.6;
+      color: $color-text-light;
+      margin-top: $spacing-sm;
+    }
+  }
+
+  .content-section {
+    width: 70%;
+    margin: 0 auto;
+
+    @include mobile {
+      width: 95%;
+    }
+
+    .search-area {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: $spacing-sm;
+      margin-bottom: $spacing-lg;
+
+      .search-input {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        color: $color-text-light;
+        border: 1px solid $color-accent-purple;
+        border-radius: 999px;
+        padding: 0.25rem 0.8rem;
+        width: 300px;
+        height: 36px;
+
+        input {
+          flex: 1;
+          border: none;
+          outline: none;
+          background-color: transparent;
+          color: $color-text-light;
+          font-size: $font-size-xs;
+
+          &::placeholder {
+            color: $color-text-light;
+            font-size: $font-size-xs;
+          }
+        }
+
+        svg {
+          color: $color-accent-purple;
+          margin-right: $spacing-sm;
+        }
+      }
+
+      .filter-icon {
+        padding: 0.4rem;
+        border: 1px solid $color-accent-purple;
+        border-radius: 50%;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        svg {
+          color: $color-accent-purple;
+        }
+      }
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: $spacing-xs;
+      margin-bottom: $spacing-lg;
+
+      @include mobile {
+        padding: 0 $spacing-xl;
+        margin-bottom: $spacing-md !important;
+      }
+
+      .tab-btn {
+        padding: 0.3rem 0.9rem;
+        font-size: $font-size-xs;
+        background-color: rgba($color-accent-purple, 0.2);
+        border-radius: $radius-full;
+        color: $color-text-light;
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s;
+
+        &.active {
+          border: 0.1px solid rgba($color-text-light, 0.5);
+        }
+
+        &:hover {
+          background-color: rgba($color-white, 0.08);
+        }
+
+        &.more-tab {
+          background-color: transparent;
+          color: $color-accent-purple;
+          border: none;
+
+          &:hover {
+            background-color: transparent;
+          }
+
+          &.active {
+            color: $color-accent-purple;
+            border: none;
+          }
+        }
+      }
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: $spacing-lg;
+      margin-top: $spacing-2xl;
+
+      @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @include mobile {
+        grid-template-columns: 1fr;
+        gap: $spacing-md;
+        margin-top: $spacing-2xl;
+      }
+
+      .template-card {
+        background-color: $color-primary;
+        border-radius: $radius-md;
+        padding: $spacing-md;
+        text-align: left;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      
+        // Thin top-left border
+        border-top: 1px solid $color-accent-purple;
+        border-left: 1px solid $color-accent-purple;
+      
+        // Fake 2D bottom-right shadow
+        box-shadow: 3px 3px 0 rgba($color-accent-purple, 0.2);
+      
+        &:hover {
+          transform: translateY(-4px); // subtle upward lift
+          box-shadow: 5px 5px 0 rgba($color-accent-purple, 0.25);
+        }
+      
+        @include mobile {
+          width: 80%;
+          margin: 0 auto;
+          padding: $spacing-sm;
+        }
+      
+        img {
+          width: 100%;
+          height: 130px;
+          object-fit: cover;
+          margin-bottom: $spacing-xs;
+      
+          @include mobile {
+            height: 100px;
+          }
+        }
+      
+        .agent-title {
+          font-size: $font-size-xs;
+          color: $color-white;
+          margin-bottom: $spacing-xxs;
+      
+          @include mobile {
+            font-size: $font-size-2xs;
+          }
+        }
+      
+        .status-line {
+          display: flex;
+          align-items: center;
+          gap: 0.4rem;
+          font-size: $font-size-2xs;
+          color: $color-text-light;
+          margin-bottom: $spacing-sm;
+      
+          @include mobile {
+            font-size: 10px;
+          }
+      
+          .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+      
+            &.active {
+              background-color: $color-accent-purple;
+            }
+      
+            &.inactive {
+              background-color: gray;
+            }
+          }
+        }
+      
+        .card-buttons {
+          display: flex;
+          gap: $spacing-xs;
+          margin-top: $spacing-sm;
+      
+          button {
+            flex: 1;
+            height: 34px;
+            font-size: $font-size-2xs;
+            border-radius: $radius-sm;
+            font-weight: $font-weight-medium;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+      
+            @include mobile {
+              height: 28px;
+              font-size: 10px;
+            }
+          }
+      
+          .preview-btn {
+            background-color: $color-accent-purple;
+            color: $color-white;
+            border: none;
+      
+            &:hover {
+              background-color: darken($color-accent-purple, 5%);
+            }
+          }
+      
+          .use-btn {
+            border: 1px solid $color-accent-purple;
+            background-color: transparent;
+            color: $color-accent-purple;
+      
+            &:hover {
+              background-color: rgba($color-accent-purple, 0.08);
+            }
+          }
+        }
+      }
+      
+    }
+  }
+}
