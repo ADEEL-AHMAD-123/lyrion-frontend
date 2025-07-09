@@ -170,13 +170,11 @@
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         position: relative;
         overflow: hidden;
-      
-        // Thin top-left border
-        border-top: 1px solid $color-accent-purple;
-        border-left: 1px solid $color-accent-purple;
-      
-        // Fake 2D bottom-right shadow
-        box-shadow: 3px 3px 0 rgba($color-accent-purple, 0.2);
+        border-bottom: 1px solid $color-accent-purple;
+        border-right: 1px solid $color-accent-purple;
+
+        box-shadow: -3px -3px 0 rgba($color-accent-purple, 0.2);
+
       
         &:hover {
           transform: translateY(-4px); // subtle upward lift
