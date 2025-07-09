@@ -4,6 +4,7 @@ import { Search, SlidersHorizontal } from "lucide-react";
 import agent1 from "../../assets/images/assistant agent.png";
 import agent2 from "../../assets/images/calling-agent.png";
 import agent3 from "../../assets/images/chatbot-agent.png";
+import TemplatesByCategory from "../../components/sections/templates by category section/TemplatesByCategory";
 
 const tabs = ["Calling Agent", "Assistant Agent", "Chatbot Agent", "AI Worker", "More"];
 const cardImages = [agent1, agent2, agent3];
@@ -37,12 +38,12 @@ const TemplatesPage = () => {
   };
 
   return (
+    <> 
     <section className="template-page">
       <div className="hero">
-        <h1>Explore AI Templates</h1>
+        <h1>AI Agent Templates</h1>
         <p>
-          Choose from a variety of intelligent automation agents designed to accelerate
-          productivity and simplify operations.
+        Create powerful, intelligent bots to automate tasks, boost productivity, and grow your business-no coding required.
         </p>
       </div>
 
@@ -74,6 +75,8 @@ const TemplatesPage = () => {
         <div className="cards-grid">{renderCards()}</div>
       </div>
     </section>
+    <TemplatesByCategory/>
+    </>
   );
 };
 
