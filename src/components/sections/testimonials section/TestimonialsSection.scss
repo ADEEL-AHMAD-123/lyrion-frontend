@@ -1,0 +1,161 @@
+@use "../../../styles/base/variables" as *;
+@use "../../../styles/base/mixins" as *;
+
+.testimonials-section {
+    background-color: $color-primary;
+    color: $color-text-light;
+    padding: 4rem 0;
+    width: 100%;
+  
+    .section-header {
+      text-align: center;
+      width: 40%;
+      margin: 0 auto $spacing-2xl;
+  
+      @include tablet {
+        width: 50%;
+      }
+  
+      @include mobile {
+        width: 70%;
+      }
+  
+      h2 {
+        font-size: $font-size-2xl;
+        margin-bottom: $spacing-sm;
+      }
+  
+      p {
+        font-size: $font-size-sm;
+        line-height: 1.6;
+      }
+    }
+  
+    .testimonial-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: $spacing-lg;
+      @include mobile {
+padding: 0 $spacing-lg;
+gap: $spacing-sm;
+      }
+  
+      .arrow-btn {
+        background: $color-cards-bg;
+        border-radius: $radius-full;
+        color: $color-text-light;
+        font-size: $font-size-sm;
+        cursor: pointer;
+        padding: 0.6rem 0.6rem;
+        border: none;
+        transition: background-color 0.3s ease;
+        box-shadow: $shadow-soft;
+        display: flex;
+        align-items: center;
+      
+  
+        &.left {
+          transform: rotate(180deg);
+        }
+  
+        &:hover:not(.disabled) {
+          background-color: lighten($color-cards-bg, 5%);
+        }
+  
+        &.disabled {
+          opacity: 0.4;
+          cursor: not-allowed;
+        }
+      }
+  
+      .testimonial-slider {
+        overflow: hidden;
+        width: 35%;
+  
+        @include tablet {
+          width: 50%;
+        }
+  
+        @include mobile {
+          width: 90%;
+        }
+  
+        .testimonial-track {
+          display: flex;
+          transition: transform 0.5s ease;
+        }
+  
+        .testimonial-card {
+          min-width: 100%;
+          box-sizing: border-box;
+          background: $color-cards-bg;
+          box-shadow: $shadow-soft;
+          border-radius: $radius-md;
+          padding: $spacing-lg;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+  
+          @include tablet {
+            padding: $spacing-md;
+          }
+  
+          @include mobile {
+            padding: $spacing-sm;
+          }
+  
+          .review-text {
+            font-size: $font-size-sm;
+            line-height: 1.7;
+            margin-bottom: $spacing-lg;
+            color: $color-text-light;
+            word-break: break-word;
+  
+            @include mobile {
+              font-size: 12px;
+              margin-bottom: $spacing-md;
+            }
+          }
+  
+          .author-info {
+            display: flex;
+            align-items: center;
+            gap: $spacing-xs;
+  
+            img {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              object-fit: cover;
+  
+              @include mobile {
+                width: 35px;
+                height: 35px;
+              }
+            }
+  
+            .author-details {
+              text-align: left;
+  
+              h5 {
+                margin: 0;
+                font-size: $font-size-xs;
+                color: $color-white;
+  
+                @include mobile {
+                  font-size: $font-size-2xs;
+                }
+              }
+  
+              span {
+                font-size: $font-size-2xs;
+                color: $color-text-light;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  

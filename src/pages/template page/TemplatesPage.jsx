@@ -5,6 +5,7 @@ import agent1 from "../../assets/images/assistant agent.png";
 import agent2 from "../../assets/images/calling-agent.png";
 import agent3 from "../../assets/images/chatbot-agent.png";
 import TemplatesByCategory from "../../components/sections/templates by category section/TemplatesByCategory";
+import TestimonialsSection from "../../components/sections/testimonials section/TestimonialsSection";
 
 const tabs = ["Calling Agent", "Assistant Agent", "Chatbot Agent", "AI Worker", "More"];
 const cardImages = [agent1, agent2, agent3];
@@ -76,6 +77,7 @@ const TemplatesPage = () => {
       </div>
     </section>
     <TemplatesByCategory/>
+    <TestimonialsSection/>
     </>
   );
 };
