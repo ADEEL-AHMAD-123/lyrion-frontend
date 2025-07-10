@@ -1,5 +1,5 @@
 @use './variables' as *;
-
+ 
 // MOBILE: ≤ 767px
 @mixin mobile {
   @media (max-width: $breakpoint-mobile) {
@@ -20,3 +20,55 @@
     @content;
   }
 }
+
+// background pattern for sections
+@mixin pattern-background {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -3rem;
+    left: -10rem;
+
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/images/pattern.png');
+    background-repeat: no-repeat;
+    background-size: 130%; 
+
+    z-index: 0;
+    opacity: 1;
+    animation: pattern-float 20s linear infinite;
+    pointer-events: none;
+  }
+
+  @include tablet {
+    &::before {
+      background-size: 160%;
+      background-position: center left -120px;
+    }
+  }
+
+  @include mobile {
+    &::before {
+      background-size: 180%;
+      background-position: top left -150px;
+    }
+  }
+}
+
+@keyframes pattern-float {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+  50% {
+    transform: scale(1.01) translateY(10px);
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+
+
