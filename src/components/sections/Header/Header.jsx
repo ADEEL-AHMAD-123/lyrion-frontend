@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; 
+import { Link } from 'react-router-dom';
 import PrimaryButton from '../../common/primary button/PrimaryButton';
 import './_header.scss';
+import logo from '../../../assets/images/logo.png'; // ✅ adjust path if needed
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,7 +16,9 @@ const Header = () => {
     <header className="site-header">
       <div className="container">
         <div className="logo">
-          <Link to="/">LyrionAI</Link>
+          <Link to="/">
+            <img src={logo} alt="LyrionAI Logo" className="logo-img" />
+          </Link>
         </div>
 
         <nav className={`nav ${isMenuOpen ? 'open' : ''}`}>
@@ -44,8 +47,7 @@ const Header = () => {
         </nav>
 
         <div className="cta">
-        <PrimaryButton text="Get Started" to="/get-started" hideOnMobile />
-
+          <PrimaryButton text="Get Started" to="/get-started" hideOnMobile />
           <div className="hamburger" onClick={toggleMenu}>
             <span className="bar"></span>
             <span className="bar"></span>

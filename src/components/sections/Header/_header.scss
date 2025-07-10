@@ -1,5 +1,5 @@
 @use '../../../styles/base/variables' as *;
-
+@use "../../../styles/base/mixins" as *;
 .site-header {
   position: fixed;
   top: 0;
@@ -7,6 +7,9 @@
   padding: $spacing-md $spacing-2xl;
   background-color: $color-primary;
   z-index: 100;
+  @include mobile {
+    padding: $spacing-md $spacing-xs;
+  }
 
   .container {
     max-width: 80%;
@@ -22,13 +25,15 @@
     }
   }
 
+ 
   .logo {
-    font-size: $font-size-lg;
-    font-weight: $font-weight-bold;
-    color: $color-primary-light;
-    display: flex;
-    align-items: center;
+    .logo-img {
+      max-height: 100px;
+      width: 100px;
+      display: block;
+    }
   }
+
 
   .nav {
     display: flex;
@@ -46,6 +51,18 @@
         position: relative;
         span{
           color: $color-text-light;
+          &:hover {
+            color: $color-accent-purple;
+          }
+          .arrow {
+            font-size: 1rem;
+            opacity: 0.7;
+            transition: transform 0.3s ease;
+            margin-left: 4px;
+            position: relative;
+            top: -2px;
+            
+          }
         }
 
         a {
@@ -59,23 +76,18 @@
           transition: color 0.2s ease;
 
           &:hover {
-            color: $color-accent-blue;
+            color: $color-accent-purple;
 
             .arrow {
-              color: $color-accent-blue;
+              color: $color-accent-purple;
             }
           }
 
-          .arrow {
-            font-size: 1rem;
-            opacity: 0.7;
-            transition: transform 0.3s ease;
-
-          }
         }
 
         &.has-submenu {
           cursor: pointer;
+          
 
           .submenu {
             position: absolute;
@@ -99,7 +111,7 @@
                 color: $color-text-light;
 
                 &:hover {
-                  color: $color-accent-blue;
+                  color: $color-accent-purple;
                 }
               }
             }

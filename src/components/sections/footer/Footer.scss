@@ -1,0 +1,199 @@
+@use "../../../styles/base/variables" as *;
+@use "../../../styles/base/mixins" as *;
+
+.footer {
+  background-color: $color-primary;
+  color: $color-text-light;
+  padding: 3rem 1rem;
+  
+  display: flex;
+  justify-content: center;
+  .footer-wrapper{
+    width: 90%;
+    border-top: 0.1px solid rgba($color-text-light, 0.5);
+  }
+  .footer-container {
+    width: 80%;
+    max-width: 1300px;
+    margin: 0 auto;
+    @include mobile {
+       width: 90%;
+      }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: $spacing-xs;
+
+      @include mobile {
+        gap: $spacing-sm;
+        text-align: center;
+      }
+
+      .footer-logo {
+        width: 120px;
+
+        @include mobile {
+          width: 100px;
+        }
+      }
+
+      .copyright {
+        font-size: $font-size-xs;
+        color: $color-text-light;
+        @include mobile {
+            font-size: $font-size-2xs;
+          }
+      }
+    }
+
+    .footer-middle {
+      display: flex;
+      justify-content: space-between;
+      gap: $spacing-xl;
+      margin-bottom: $spacing-xl;
+
+
+      @include tablet {
+        flex-direction: column;
+        gap: $spacing-lg;
+      }
+      @include mobile {
+        flex-direction: column;
+        gap: $spacing-lg;
+      }
+
+      .newsletter {
+        flex: 0 0 45%;
+        @include mobile {
+          margin-bottom: $spacing-lg;
+          }
+
+        h6{
+          font-size: $font-size-xs;
+          margin-bottom: $spacing-sm;
+          font-weight: $font-weight-medium;
+        }
+
+        .newsletter-form {
+          display: flex;
+          gap: $spacing-xs;
+          margin-bottom: $spacing-md;
+
+          input {
+            flex: 0.7;
+            padding: 0.7rem 1rem;
+            border: none;
+            border-radius: $radius-sm;
+            font-size: $font-size-sm;
+            background: transparent;
+            color: $color-text-light;
+            border: 0.1px solid rgba($color-text-light, 0.5);
+          }
+
+          button {
+            padding: 0.7rem 1rem;
+            background-color: transparent;
+            border: 0.1px solid rgba($color-text-light, 0.5);
+            border-radius: $radius-sm;
+            color: $color-text-light;
+            font-weight: lighter;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+              background-color: darken($color-accent-purple, 5%);
+            }
+          }
+        }
+
+        .privacy-text {
+          font-size: $font-size-2xs;
+
+          a {
+            text-decoration: underline;
+            color: $color-accent-purple;
+
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+
+      .footer-links {
+        flex: 0 0 50%;
+        display: flex;
+        justify-content: space-between;
+        gap: $spacing-lg;
+      
+        @include mobile {
+
+          gap: $spacing-md;
+        }
+
+        .footer-column {
+          display: flex;
+          flex-direction: column;
+          gap: $spacing-xs;
+
+          a {
+            color: $color-text-light;
+            font-size: $font-size-xs;
+            text-decoration: none;
+
+            &:hover {
+              color: $color-accent-purple;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-bottom {
+      border-top: 0.1px solid rgba($color-text-light, 0.5);
+    
+      padding-top: $spacing-md;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+
+      @include mobile {
+        flex-direction: column;
+        gap: $spacing-sm;
+        text-align: center;
+      }
+
+      .left {
+        display: flex;
+        gap: $spacing-sm;
+
+        a {
+          font-size: $font-size-2xs;
+          color: $color-text-light;
+          text-decoration: none;
+
+          &:hover {
+            color: $color-accent-purple;
+          }
+        }
+      }
+
+      .right {
+        display: flex;
+        gap: $spacing-sm;
+
+        a {
+          color: $color-text-light;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: $color-accent-purple;
+          }
+        }
+      }
+    }
+  }
+}
