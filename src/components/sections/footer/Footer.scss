@@ -12,15 +12,18 @@
   .footer-wrapper {
     width: 90%;
     border-top: 0.1px solid rgba($color-text-light, 0.5);
+    @include mobile {
+      width: 95%;
+    }
   }
   .footer-container {
     width: 80%;
     max-width: 1300px;
     margin: 0 auto;
-    padding: $spacing-2xl;
+    padding: $spacing-xl;
 
     @include mobile {
-      width: 90%;
+      width: 95%;
       padding: $spacing-xs;
     }
 
@@ -31,9 +34,9 @@
       margin-bottom: $spacing-xs;
 
       @include mobile {
-        gap: $spacing-sm;
+        gap: $spacing-xs;
         text-align: center;
-        margin-bottom: $spacing-sm;
+        margin: $spacing-md 0;
       }
 
       .footer-logo {
@@ -41,7 +44,7 @@
         margin-left: -8px;
 
         @include mobile {
-          width: 100px;
+          width: 80px;
         }
       }
 

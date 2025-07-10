@@ -35,9 +35,9 @@ const Home = () => {
 
       <section className="how-it-works-section">
         <img src={pattern} alt="pattern" className="pattern-bg" />
-        <div className="image-wrapper">
+        {/* <div className="image-wrapper">
           <img src={howItWorksImg} alt="How it works" />
-        </div>
+        </div> */}
       </section>
     </>
   );
