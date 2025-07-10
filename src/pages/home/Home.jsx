@@ -1,6 +1,6 @@
 import React from "react";
 import Hero from "../../components/sections/Hero/Hero";
-import EmpowerSection from "../../components/empower section/EmpowerSection";
+import EmpowerSection from "../../components/empower-section/EmpowerSection";
 import "./Home.scss";
 
 import pattern from '../../assets/images/pattern.png';

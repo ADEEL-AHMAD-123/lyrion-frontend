@@ -4,8 +4,8 @@ import { Search, SlidersHorizontal } from "lucide-react";
 import agent1 from "../../assets/images/assistant agent.png";
 import agent2 from "../../assets/images/calling-agent.png";
 import agent3 from "../../assets/images/chatbot-agent.png";
-import TemplatesByCategory from "../../components/sections/templates by category section/TemplatesByCategory";
-import TestimonialsSection from "../../components/sections/testimonials section/TestimonialsSection";
+import TemplatesByCategory from "../../components/sections/templates-by-category-section/TemplatesByCategory";
+import TestimonialsSection from "../../components/sections/testimonials-section/TestimonialsSection";
 import CTA from "../../components/sections/CTA/CTA";
 
 const tabs = ["Calling Agent", "Assistant Agent", "Chatbot Agent", "AI Worker", "More"];
