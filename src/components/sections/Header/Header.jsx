@@ -26,7 +26,8 @@ const Header = () => {
           <ul>
             <li><Link to="/" onClick={closeMenu}>Home</Link></li>
             <li><Link to="/about" onClick={closeMenu}>About</Link></li>
-            <li><Link to="/features" onClick={closeMenu}>Features</Link></li>
+            {/* <li><Link to="/features" onClick={closeMenu}>Features</Link></li> */}
+            <li><Link to="/templates" onClick={closeMenu}>Templates</Link></li>
             <li
               className={`has-submenu ${isSubmenuOpen ? 'open' : ''}`}
               onClick={toggleSubmenu}
