@@ -1,5 +1,5 @@
-@use '../../styles/base/variables' as *;
-@use '../../styles/base/mixins' as *;
+@use '../../../styles/base/variables' as *;
+@use '../../../styles/base/mixins' as *;
 
 .empower-section {
   position: relative;
@@ -8,6 +8,10 @@
   padding: $spacing-3xl 0;
   text-align: center;
   overflow: hidden;
+  .background-layer {
+    @include pattern-background;
+
+  }
 
   .empower-pattern {
     position: absolute;

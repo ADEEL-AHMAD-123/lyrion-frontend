@@ -1,15 +1,15 @@
 import React from "react";
 import Hero from "../../components/sections/Hero/Hero";
-import EmpowerSection from "../../components/empower-section/EmpowerSection";
-import "./Home.scss";
+import EmpowerSection from "../../components/sections/EmpowerSection/EmpowerSection";
+import "./HomePage.scss";
 
 import pattern from '../../assets/images/pattern.png';
-import howItWorksImg from '../../assets/images/how-its-work.jpeg';
-import audienceImg from "../../assets/images/whos-it-for.png";
+import howItWorksImg from '../../assets/images/How_its_work.png';
+import audienceImg from "../../assets/images/who_its_for.png";
 import glowImg from "../../assets/images/glows.png";
 import mockupImg from "../../assets/images/Mockup.png";
 
-const Home = () => {
+const HomePage = () => {
   return (
     <>
       <Hero
@@ -20,27 +20,27 @@ const Home = () => {
 
       {/* Mockup specific to homepage */}
       <div className="hero-mockup-wrapper">
-        <img src={glowImg} alt="glow" className="glow" />
+      <div className="background-layer" />
         <img src={mockupImg} alt="mockup" className="mockup" />
       </div>
 
       <EmpowerSection />
 
       <section className="who-it-is-for-section">
-        <img src={pattern} alt="pattern" className="pattern-bg" />
+      <div className="background-layer" />
         <div className="image-wrapper">
           <img src={audienceImg} alt="Who it's for" />
         </div>
       </section>
 
       <section className="how-it-works-section">
-        <img src={pattern} alt="pattern" className="pattern-bg" />
-        {/* <div className="image-wrapper">
+      <div className="background-layer" />
+        <div className="image-wrapper">
           <img src={howItWorksImg} alt="How it works" />
-        </div> */}
+        </div>
       </section>
     </>
   );
 };
 
-export default Home;
+export default HomePage;

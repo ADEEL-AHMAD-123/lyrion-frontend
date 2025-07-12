@@ -2,7 +2,7 @@
 import React from 'react';
 import './_empower-section.scss';
 import { Code2, SlidersHorizontal, BarChart3 } from 'lucide-react';
-import pattern from '../../assets/images/pattern.png';
+
 
 const features = [
   {
@@ -28,7 +28,7 @@ const features = [
 const EmpowerSection = () => {
   return (
     <section className="empower-section">
-      <img src={pattern} alt="Pattern" className="empower-pattern" />
+ <div className="background-layer" />
       <div className="container">
         <h2>Empower Your Business with Custom AI Agents Tailored to Your Needs</h2>
         <div className="features-grid">

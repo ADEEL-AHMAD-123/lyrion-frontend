@@ -9,7 +9,7 @@ $color-text-gray: #475569; // Secondary body text
 $color-accent-purple:#8e44ec;
 $color-white: #ffffff;
 $color-text-light: #e2e8f0e5; // light gray text on dark background
-$color-cards-bg: rgba(255, 255, 255, 0.06); 
+$color-cards-bg: #161625; 
 
 $color-white: #ffffff; // Backgrounds & text
 $color-bg-light: #f9fafb; // Section backgrounds
@@ -66,3 +66,4 @@ $breakpoint-mobile: 767px;
 $breakpoint-tablet: 1023px;
 $breakpoint-desktop: 1024px; // for min-width
 
+$pattern-image: url("../../assets/images/section_pattern.png");

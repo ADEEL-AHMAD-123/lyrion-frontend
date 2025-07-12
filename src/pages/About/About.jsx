@@ -3,7 +3,7 @@ import "./About.scss";
 import logoSplit from "../../assets/images/logo-cropped.png";
 import { MessageSquare, Bot, BarChart3, Globe, ShoppingCart } from "lucide-react";
 import Hero from "../../components/sections/Hero/Hero";
-import MissionVisionSection from "../../components/sections/mission-vision-section/MissionVisionSection";
+import MissionVisionSection from "../../components/sections/MissionVisionSection/MissionVisionSection";
 
 const aboutHeroContent = {
   heading: "About Lyrion AI",
@@ -22,6 +22,7 @@ const AboutPage = () => {
       />
 
       <section className="about-cards-section">
+      <div className="background-layer" />
         <div className="about-card-grid">
           {/* Left Card */}
           <div className="left-card card">

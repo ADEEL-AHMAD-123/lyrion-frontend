@@ -8,6 +8,12 @@
   display: flex;
   justify-content: center;
   margin-top: -5rem;
+  overflow: hidden;
+  position: relative;
+
+  .background-layer {
+    @include pattern-background;
+  }
 
   .about-card-grid {
     width: 50%;

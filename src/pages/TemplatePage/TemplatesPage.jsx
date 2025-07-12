@@ -4,8 +4,8 @@ import { Search, SlidersHorizontal } from "lucide-react";
 import agent1 from "../../assets/images/assistant agent.png";
 import agent2 from "../../assets/images/calling-agent.png";
 import agent3 from "../../assets/images/chatbot-agent.png";
-import TemplatesByCategory from "../../components/sections/templates-by-category-section/TemplatesByCategory";
-import TestimonialsSection from "../../components/sections/testimonials-section/TestimonialsSection";
+import TemplatesByCategory from "../../components/sections/TemplatesByCategory/TemplatesByCategory";
+import TestimonialsSection from "../../components/sections/TestimonialsSection/TestimonialsSection";
 import CTA from "../../components/sections/CTA/CTA";
 
 const tabs = ["Calling Agent", "Assistant Agent", "Chatbot Agent", "AI Worker", "More"];
@@ -42,6 +42,9 @@ const TemplatesPage = () => {
   return (
     <> 
     <section className="template-page">
+
+    <div className="background-layer" />
+    <div className="content-wrapper">
       <div className="hero">
         <h1>AI Agent Templates</h1>
         <p>
@@ -75,6 +78,7 @@ const TemplatesPage = () => {
         </div>
 
         <div className="cards-grid">{renderCards()}</div>
+      </div>
       </div>
     </section>
     <TemplatesByCategory/>

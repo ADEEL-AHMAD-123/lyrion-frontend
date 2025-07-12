@@ -40,6 +40,7 @@ const visionPoints = [
 const MissionVisionSection = () => {
   return (
     <section className="mission-vision-section">
+      <div className="background-layer" />
       <div className="section-content">
         <h2>Our Mission</h2>
         <p>

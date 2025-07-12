@@ -5,11 +5,22 @@
   background-color: $color-primary;
   color: $color-text-light;
   padding: 10rem 0 5rem 0;
+  position: relative;
+  overflow: hidden;
+  .content-wrapper {
+    position: relative;
+    z-index: 2; 
+  }
+  
+  .background-layer {
+    @include pattern-background;
+
+  }
   
 
   .hero {
     text-align: center;
-    width: 35%;
+    width: 65%;
     margin-inline: auto;
     margin-bottom: $spacing-2xl;
 
@@ -22,11 +33,17 @@
     }
 
     h1 {
-      font-size: $font-size-3xl;
-      font-weight: $font-weight-bold;
+      font-size: 54px;
+      font-weight: $font-weight-medium;
+      line-height: 1.3;
+      margin-bottom: $spacing-md;
+
+      @include tablet {
+        font-size: $font-size-2xl;
+      }
 
       @include mobile {
-        font-size: $font-size-xl;
+        font-size: $font-size-2xl;
       }
     }
 
@@ -35,6 +52,7 @@
       line-height: 1.6;
       color: $color-text-light;
       margin-top: $spacing-sm;
+      padding: 0 $spacing-3xl;
     }
   }
 
