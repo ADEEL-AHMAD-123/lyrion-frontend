@@ -6,44 +6,7 @@
   color: $color-text-light;
   padding: 5rem 0;
 
-  .section-header {
-    text-align: center;
-    width: 40%;
-    margin-inline: auto;
-    margin-bottom: $spacing-2xl;
-    @include tablet {
-        width: 60%;
-      }
-  
-      @include mobile {
-        width: 80%;
-      }
-
-    h2 {
-      font-size: 48px;
-      margin-bottom: $spacing-sm;
-      @include tablet {
-        font-size: $font-size-2xl;
-      }
-
-      @include mobile {
-        font-size: $font-size-xl;
-      }
-    }
-
-    p {
-      font-size: $font-size-sm;
-      color: $color-text-light;
-      max-width: 600px;
-      margin: 0 auto;
-      line-height: 1.6;
-    
-      @include mobile {
-        font-size: $font-size-xs;
-        line-height: 1;
-      }
-    }
-  }
+ 
   .category-block {
     position: relative;
     overflow: hidden;
@@ -131,29 +94,8 @@
           line-height: 1.5;
         }
       
-        .more-btn {
-          display: flex;
-          align-items: center;
-          gap: 0.5rem;
-          font-size: $font-size-xs;
-          background-color: transparent;
-          border: none;
-          color: $color-text-light;
-          font-weight: $font-weight-medium;
-          cursor: pointer;
       
-          &::after {
-            content: "➞";
-            font-size: 1rem;
-            display: inline-block;
-            margin-left: 0.25rem;
-            transform: translateX(2px);
-          }
-      
-          &:hover {
-            text-decoration: underline;
-          }
-        }
+        
       }
       
     }
@@ -290,28 +232,39 @@ border-bottom: 1px solid $color-accent-purple;
     }
   }
 
-  .view-more-wrapper {
-    margin-top: $spacing-2xl;
+ 
+}
+
+.view-more-wrapper {
+  margin-top: $spacing-2xl;
+  display: flex;
+  justify-content: center;
+
+  @include mobile {
+    margin: 0;
+  }
+  
+
+  .view-more-btn {
+    padding: 0.5rem 1rem;
+    font-size: $font-size-sm;
+    background-color: rgba($color-accent-purple, 0.2);
+    border-radius: $radius-full;
+    color: $color-text-light;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
     display: flex;
-    justify-content: center;
-    @include mobile {
-     margin: 0;
-      }
+    align-items: center;
+    gap: 0.5rem;
 
-    .view-more-btn {
-        padding: 0.5rem 1rem;
-        font-size: $font-size-sm;
-        background-color: rgba($color-accent-purple, 0.2);
-        border-radius: $radius-full;
-        color: $color-text-light;
-        border: none;
-        cursor: pointer;
-        transition: all 0.2s;
+    &:hover {
+      background-color: rgba($color-white, 0.08);
+    }
 
-        &:hover {
-          background-color: rgba($color-white, 0.08);
-        }
-   
+    .arrow-icon {
+      color: inherit;
+      margin-top: 1px;
     }
   }
 }

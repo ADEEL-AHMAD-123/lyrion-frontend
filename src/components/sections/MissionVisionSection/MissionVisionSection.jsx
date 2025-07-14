@@ -1,6 +1,7 @@
 import React from "react";
 import "./MissionVisionSection.scss";
 import { Check } from "lucide-react";
+import SectionIntro from "../../common/SectionIntro/SectionIntro";
 
 const missionPoints = [
   {
@@ -41,12 +42,13 @@ const MissionVisionSection = () => {
   return (
     <section className="mission-vision-section">
       <div className="background-layer" />
+
       <div className="section-content">
-        <h2>Our Mission</h2>
-        <p>
-          Democratizing AI by enabling businesses to build, deploy, and scale
-          intelligent automation agents with ease, without the need for technical expertise.
-        </p>
+        <SectionIntro
+          heading="Our Mission"
+          paragraph="Democratizing AI by enabling businesses to build, deploy, and scale intelligent automation agents with ease, without the need for technical expertise."
+          size="medium"
+        />
 
         <div className="cards-grid">
           {missionPoints.map((item, i) => (
@@ -64,11 +66,11 @@ const MissionVisionSection = () => {
       </div>
 
       <div className="section-content">
-        <h2>Our Vision</h2>
-        <p>
-          To become the leading platform for AI-driven business automation,
-          helping individuals and organizations unlock new revenue streams.
-        </p>
+        <SectionIntro
+          heading="Our Vision"
+          paragraph="To become the leading platform for AI-driven business automation, helping individuals and organizations unlock new revenue streams."
+          size="medium"
+        />
 
         <div className="cards-grid vision-layout">
           {visionPoints.map((item, i) => (
@@ -87,5 +89,6 @@ const MissionVisionSection = () => {
     </section>
   );
 };
+
 
 export default MissionVisionSection;

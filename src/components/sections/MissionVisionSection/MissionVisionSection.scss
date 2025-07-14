@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: $spacing-3xl;
   overflow: hidden;
   position: relative;
@@ -17,9 +18,11 @@
   }
 
   .section-content {
-    width: 55%;
+    width: 100%;
     text-align: center;
     z-index: 1;
+    gap: $spacing-xs;
+
     
 
     @include tablet {
@@ -30,25 +33,7 @@
       width: 90%;
     }
 
-    h2 {
-      font-size: $font-size-2xl;
-      font-weight: $font-weight-medium;
-      margin-bottom: $spacing-sm;
-    }
-
-    p {
-      font-size: $font-size-xs;
-      color: $color-text-light;
-      line-height: 1.6;
-      margin-bottom: $spacing-xl;
-      padding: 0 8rem;
-      @include mobile {
-        padding: 0 3rem !important;
-      }
-      @include mobile {
-        padding: 0 6rem !important;
-      }
-    }
+   
   }
 
   .cards-grid {
@@ -57,8 +42,18 @@
     grid-auto-rows: 1fr;
     gap: $spacing-lg;
     margin-top: 3rem;
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
   
     @include mobile {
+      width: 100%;
+      grid-template-columns: 1fr;
+      gap: $spacing-md;
+      margin: -2rem 0;
+    }
+    @include tablet {
+      width: 100%;
       grid-template-columns: 1fr;
       gap: $spacing-md;
     }
@@ -106,6 +101,7 @@
     }
 
     .mission-card {
+    
       .icon-text {
         display: flex;
         gap: $spacing-sm;
@@ -135,13 +131,13 @@
           // DESKTOP & TABLET styles
           grid-column: span 2;
           justify-self: center;
-          width: calc(50% - $spacing-lg / 2);
+          // width: calc(50% - $spacing-lg / 2);
           margin: 0;
     
           // MOBILE styles
           @include mobile {
             grid-column: 1 / -1;
-            width: 93.5%;
+            // width: 90%;
             margin: 0 1rem;
           }
         }

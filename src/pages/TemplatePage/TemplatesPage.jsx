@@ -7,6 +7,8 @@ import agent3 from "../../assets/images/chatbot-agent.png";
 import TemplatesByCategory from "../../components/sections/TemplatesByCategory/TemplatesByCategory";
 import TestimonialsSection from "../../components/sections/TestimonialsSection/TestimonialsSection";
 import CTA from "../../components/sections/CTA/CTA";
+import SectionIntro from "../../components/common/SectionIntro/SectionIntro"; 
+
 
 const tabs = ["Calling Agent", "Assistant Agent", "Chatbot Agent", "AI Worker", "More"];
 const cardImages = [agent1, agent2, agent3];
@@ -45,12 +47,11 @@ const TemplatesPage = () => {
 
     <div className="background-layer" />
     <div className="content-wrapper">
-      <div className="hero">
-        <h1>AI Agent Templates</h1>
-        <p>
-        Create powerful, intelligent bots to automate tasks, boost productivity, and grow your business-no coding required.
-        </p>
-      </div>
+    <SectionIntro
+            heading="AI Agent Templates"
+            paragraph="Create powerful, intelligent bots to automate tasks, boost productivity, and grow your business—no coding required."
+
+          />  
 
       <div className="content-section">
         <div className="search-area">

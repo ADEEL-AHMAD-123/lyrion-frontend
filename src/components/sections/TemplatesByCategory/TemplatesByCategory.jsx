@@ -3,6 +3,8 @@ import "./TemplatesByCategory.scss";
 import agent1 from "../../../assets/images/assistant agent.png";
 import agent2 from "../../../assets/images/calling-agent.png";
 import agent3 from "../../../assets/images/chatbot-agent.png";
+import SectionIntro from "../../common/SectionIntro/SectionIntro";
+import { ChevronDown } from "lucide-react";
 
 const categoryData = [
   {
@@ -28,12 +30,11 @@ const categoryData = [
 const TemplatesByCategory = () => {
   return (
     <section className="template-categories">
-      <div className="section-header">
-        <h2>Explore Templates by Category</h2>
-        <p>
-        Choose from a variety of pre-built templates designed for different business needs. Customize them to your heart's content.
-        </p>
-      </div>
+    <SectionIntro
+  heading="Explore Templates by Category"
+  paragraph="Choose from a variety of pre-built templates designed for different business needs. Customize them to your heart's content."
+  size="medium"
+/>
 
       <div className="categories-wrapper">
         {categoryData.map((cat, index) => (
@@ -71,8 +72,13 @@ const TemplatesByCategory = () => {
       </div>
 
       <div className="view-more-wrapper">
-        <button className="view-more-btn">Explore More</button>
-      </div>
+      <button className="view-more-btn">
+  Explore More
+  <ChevronDown className="arrow-icon" size={16} strokeWidth={1.5} stroke="currentColor" />
+</button>
+
+</div>
+
     </section>
   );
 };
