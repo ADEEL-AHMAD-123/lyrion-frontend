@@ -48,6 +48,10 @@
     gap: $spacing-md;
     box-shadow: $shadow-soft;
     transition: all 0.3s ease;
+     &:hover {
+      transform: translateY(-8px);
+
+    }
 
     .icon {
       color: $color-text-light;

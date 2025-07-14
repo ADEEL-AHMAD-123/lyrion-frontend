@@ -1,0 +1,85 @@
+@use '../../../styles/base/variables' as *;
+@use '../../../styles/base/mixins' as *;
+
+.faq-section {
+  width: 100%;
+  position: relative;
+
+  background-color: $color-primary;
+  color: $color-text-light;
+  text-align: center;
+  overflow: hidden;
+
+  .background-layer {
+    @include pattern-background;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .faq-wrapper {
+    width: 40%;
+    margin: $spacing-lg auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+
+    @include tablet {
+      width: 75%;
+    }
+
+    @include mobile {
+      width: 100%;
+      margin-top: 0;
+    }
+
+    .faq-item {
+      background: rgba($color-primary-light, 0.05);
+      border-radius: $radius-md;
+      padding: $spacing-md;
+      text-align: left;
+      cursor: pointer;
+      border: 1px solid rgba($color-text-light, 0.05);
+      transition: all 0.3s ease;
+
+      .faq-question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 18.3px;
+        font-weight: $font-weight-semibold;
+        color: $color-text-light;
+
+        .faq-icon {
+          flex-shrink: 0;
+          margin-left: 0.5rem;
+top :0;
+        }
+
+        @include mobile {
+          font-size: 14px;
+
+          .faq-icon {
+            width: 14px;
+            height: 16px;
+          }
+        }
+      }
+
+      .faq-answer {
+        margin-top: $spacing-xs;
+        font-size: 15.1px;
+        color: $color-text-light;
+        line-height: 1.6;
+
+        @include mobile {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

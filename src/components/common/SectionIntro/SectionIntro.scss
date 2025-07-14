@@ -5,9 +5,10 @@
   width: 65%;
   margin: 0 auto;
   padding-top: $spacing-3xl;
-  padding-bottom: $spacing-2xl;
+  padding-bottom: $spacing-lg;
   text-align: center;
   z-index: 1;
+
 
   @include tablet {
     width: 60%;
@@ -15,7 +16,7 @@
 
   @include mobile {
     width: 90%;
-    padding-bottom: $spacing-xl;
+    padding-bottom: $spacing-xs;
 
   }
 
@@ -40,6 +41,7 @@
 
   &.large h1 {
     font-size: 54px;
+   
 
     @include tablet {
       font-size: $font-size-2xl;
@@ -49,6 +51,7 @@
       font-size: $font-size-2xl;
     }
   }
+  
 
   &.medium h1 {
     font-size: 48px;
@@ -74,6 +77,13 @@
 
     @include mobile {
       font-size: $font-size-xs;
+    }
+  }
+  &.large p {
+    padding: 0 1rem;
+
+    @include desktop {
+      padding: 0 5rem;
     }
   }
 

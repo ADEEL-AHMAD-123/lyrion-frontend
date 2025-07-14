@@ -1,0 +1,114 @@
+@use "../../../styles/base/variables" as *;
+@use "../../../styles/base/mixins" as *;
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $spacing-xl;
+    margin-top: $spacing-xl;
+  
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: $spacing-lg;
+    }
+  
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: $spacing-md;
+    }
+  
+    .pricing-card {
+      background: $color-cards-bg;
+      border-radius: $radius-md;
+      padding: $spacing-lg;
+      text-align: left;
+      box-shadow: $shadow-soft;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  
+      .plan-name {
+        font-size: 11.5px;
+        color: $color-text-light;
+        font-weight: $font-weight-semibold;
+        background: rgba($color-primary-light, 0.3);
+        padding: 0.3rem 0.9rem;
+        padding: 1px 0;
+        border-radius: $radius-lg;
+        width: 77px;
+        text-align: center;
+        margin-bottom: $spacing-sm;  
+      }
+  
+      .price {
+        display: flex;
+        align-items: baseline;
+        gap: 0.2rem;
+        margin-bottom: $spacing-xs;
+  
+        .amount {
+          font-size: 2rem;
+          font-weight: $font-weight-semibold;
+          color: $color-white;
+        }
+  
+        .duration {
+          font-size: $font-size-xs;
+          color: $color-text-light;
+        }
+      }
+  
+      .desc {
+        font-size: 12px;
+        line-height: 1.5;
+        color: $color-text-light;
+        margin-bottom: $spacing-md;
+      }
+  
+      .divider {
+        height: 1px;
+        background-color: rgba($color-white, 0.15);
+        margin-bottom: $spacing-md;
+      }
+  
+      .features {
+        display: flex;
+        flex-direction: column;
+        gap: $spacing-sm;
+        margin-bottom: $spacing-lg;
+  
+        .feature-line {
+          display: flex;
+          align-items: center;
+          gap: $spacing-xs;
+          color: $color-text-light;
+          font-size: $font-size-xs;
+  
+          .tick {
+            color: $color-text-light;
+            flex-shrink: 0;
+          }
+        }
+      }
+  
+      .cta-btn {
+        margin-top: auto;
+        background: rgba($color-primary-light, 0.3);
+        color: $color-white;
+        font-size:10px;
+        padding: 0.5rem 1.25rem;
+        border-radius: $radius-sm;
+        border: none;
+        cursor: pointer;
+        width: 90%;
+        margin: auto;
+        text-align: center;
+        transition: background-color 0.3s;
+  
+        &:hover {
+          background-color: lighten($color-primary-light, 1%);
+        }
+    }
+  }
+  }
+  

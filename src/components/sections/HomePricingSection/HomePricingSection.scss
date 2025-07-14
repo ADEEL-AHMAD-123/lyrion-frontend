@@ -1,0 +1,21 @@
+@use "../../../styles/base/variables" as *;
+@use "../../../styles/base/mixins" as *;
+
+.home-pricing-plans-section {
+  position: relative;
+  padding: $spacing-3xl 0;
+  background-color: $color-primary;
+  color: $color-text-light;
+
+  .background-layer {
+    @include pattern-background;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+}

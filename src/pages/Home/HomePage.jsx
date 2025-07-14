@@ -7,7 +7,10 @@ import audienceImg from "../../assets/images/who_its_for.png";
 import glowImg from "../../assets/images/glows.png";
 import mockupImg from "../../assets/images/Mockup.png";
 import VisualBuilderSection from "../../components/sections/VisualBuilderSection/VisualBuilderSection";
-
+import StartTemplatesSection from "../../components/sections/StartTemplatesSection/StartTemplatesSection";
+import HomePricingSection from "../../components/sections/HomePricingSection/HomePricingSection";
+import TestimonialsSection from "../../components/sections/TestimonialsSection/TestimonialsSection"
+import FaqSection from "../../components/sections/FaqSection/FaqSection";
 const HomePage = () => {
   return (
     <>
@@ -39,6 +42,10 @@ const HomePage = () => {
         </div>
       </section>
       <VisualBuilderSection/>
+      <StartTemplatesSection />
+      <HomePricingSection/>
+      <TestimonialsSection/>
+      <FaqSection/>
     </>
   );
 };

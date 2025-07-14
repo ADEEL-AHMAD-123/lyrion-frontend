@@ -76,6 +76,36 @@
         justify-content: space-between;
         align-items: center;
         gap: $spacing-sm;
+
+        .more-btn {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-size: $font-size-xs;
+          background-color: transparent;
+          border: none;
+          color: $color-text-light;
+          font-weight: $font-weight-medium;
+          cursor: pointer;
+
+          margin-right: 1rem;
+
+      
+          &::after {
+            content: "➞";
+            font-size: 1rem;
+            display: inline-block;
+            margin-right: 0.9rem;
+            transform: translateX(2px);
+            margin: 0;
+
+
+          }
+      
+          &:hover {
+            text-decoration: underline;
+          }
+        }
       
         @include mobile {
           flex-direction: column;
@@ -100,136 +130,7 @@
       
     }
 
-    .cards-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: $spacing-lg;
-
-      @include tablet {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      @include mobile {
-        grid-template-columns: 1fr;
-        gap: $spacing-md;
-        justify-items: start;
-      } 
-
-      .template-card {
-        background-color: $color-primary;
-        border-radius: $radius-md;
-        box-shadow: $shadow-card;
-        overflow: hidden;
-        padding: $spacing-md;
-        text-align: left;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-border-bottom: 1px solid $color-accent-purple;
-        border-right: 1px solid $color-accent-purple;
-
-        box-shadow: -3px -3px 0 rgba($color-accent-purple, 0.2);
-
-        &:hover {
-          transform: translateY(-8px);
-          box-shadow: 5px 5px 0 rgba($color-accent-purple, 0.3);
-        }
-
-        @include mobile {
-            width: 90%;
-            margin: 0;
-          padding: $spacing-sm;
-        }
-
-        img {
-          width: 100%;
-          height: 130px;
-          object-fit: cover;
-          margin-bottom: $spacing-xs;
-
-          @include mobile {
-            height: 100px;
-          }
-        }
-
-        .agent-title {
-          font-size: $font-size-xs;
-          color: $color-white;
-          margin-bottom: $spacing-xxs;
-
-          @include mobile {
-            font-size: $font-size-2xs;
-          }
-        }
-
-        .status-line {
-          display: flex;
-          align-items: center;
-          gap: 0.4rem;
-          font-size: $font-size-2xs;
-          color: $color-text-light;
-          margin-bottom: $spacing-sm;
-
-          .dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-
-            &.active {
-              background-color: $color-accent-purple;
-            }
-
-            &.inactive {
-              background-color: gray;
-            }
-          }
-        }
-
-        .card-buttons {
-          display: flex;
-          gap: $spacing-xs;
-          margin-top: $spacing-sm;
-          
-
-          button {
-            flex: 1;
-            height: 34px;
-            font-size: $font-size-2xs;
-            border-radius: $radius-sm;
-            font-weight: $font-weight-medium;
-            cursor: pointer;
-            transition: 0.2s;
-            padding: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            @include mobile {
-              height: 28px;
-              font-size: 10px;
-            }
-          }
-
-          .preview-btn {
-            background-color: $color-accent-purple;
-            color: $color-white;
-            border: none;
-
-            &:hover {
-              background-color: darken($color-accent-purple, 5%);
-            }
-          }
-
-          .use-btn {
-            border: 1px solid $color-accent-purple;
-            background-color: transparent;
-            color: $color-accent-purple;
-
-            &:hover {
-              background-color: rgba($color-accent-purple, 0.08);
-            }
-          }
-        }
-      }
-    }
+    
   }
 
  
