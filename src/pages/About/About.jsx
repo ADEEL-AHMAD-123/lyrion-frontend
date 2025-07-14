@@ -2,7 +2,7 @@ import React from "react";
 import "./About.scss";
 import logoSplit from "../../assets/images/logo-cropped.png";
 import { MessageSquare, Bot, BarChart3, Globe, ShoppingCart } from "lucide-react";
-import Hero from "../../components/sections/Hero/Hero";
+import Hero from "../../components/common/Hero/Hero";
 import MissionVisionSection from "../../components/sections/MissionVisionSection/MissionVisionSection";
 
 const aboutHeroContent = {

@@ -68,7 +68,7 @@ const MissionVisionSection = () => {
       <div className="section-content">
         <SectionIntro
           heading="Our Vision"
-          paragraph="To become the leading platform for AI-driven business automation, helping individuals and organizations unlock new revenue streams."
+          paragraph="To become the leading platform for AI-driven business automation, helping individuals and enterprises automate tasks, optimize workflows, and unlock new revenue streams."
           size="medium"
         />
 

@@ -129,12 +129,12 @@ border-bottom: 1px solid $color-accent-purple;
         box-shadow: -3px -3px 0 rgba($color-accent-purple, 0.2);
 
         &:hover {
-          transform: translateY(-4px);
+          transform: translateY(-8px);
           box-shadow: 5px 5px 0 rgba($color-accent-purple, 0.3);
         }
 
         @include mobile {
-            width: 80%;
+            width: 90%;
             margin: 0;
           padding: $spacing-sm;
         }

@@ -2,7 +2,7 @@
 import React from 'react';
 import './_empower-section.scss';
 import { Code2, SlidersHorizontal, BarChart3 } from 'lucide-react';
-
+import CardsGrid from '../../common/CardsGrid/CardsGrid';
 
 const features = [
   {
@@ -28,23 +28,17 @@ const features = [
 const EmpowerSection = () => {
   return (
     <section className="empower-section">
- <div className="background-layer" />
+      <div className="background-layer" />
       <div className="container">
-        <h2>Empower Your Business with Custom AI Agents Tailored to Your Needs</h2>
-        <div className="features-grid">
-          {features.map((feature, index) => (
-            <div className="feature-card" key={index}>
-              <div className="icon">{feature.icon}</div>
-              <div className="text-content">
-                <h3>{feature.title}</h3>
-                <p>{feature.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+        <CardsGrid
+          heading="Empower Your Business with Custom AI Agents Tailored to Your Needs"
+          cards={features}
+          className="empower-cards"
+        />
       </div>
     </section>
   );
 };
+
 
 export default EmpowerSection;

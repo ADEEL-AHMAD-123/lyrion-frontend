@@ -1,13 +1,12 @@
 import React from "react";
-import Hero from "../../components/sections/Hero/Hero";
+import Hero from "../../components/common/Hero/Hero";
 import EmpowerSection from "../../components/sections/EmpowerSection/EmpowerSection";
 import "./HomePage.scss";
-
-import pattern from '../../assets/images/pattern.png';
 import howItWorksImg from '../../assets/images/How_its_work.png';
 import audienceImg from "../../assets/images/who_its_for.png";
 import glowImg from "../../assets/images/glows.png";
 import mockupImg from "../../assets/images/Mockup.png";
+import VisualBuilderSection from "../../components/sections/VisualBuilderSection/VisualBuilderSection";
 
 const HomePage = () => {
   return (
@@ -39,6 +38,7 @@ const HomePage = () => {
           <img src={howItWorksImg} alt="How it works" />
         </div>
       </section>
+      <VisualBuilderSection/>
     </>
   );
 };

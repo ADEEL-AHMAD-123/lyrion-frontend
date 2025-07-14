@@ -1,6 +1,6 @@
 import React from 'react';
 import './_hero.scss';
-import SectionIntro from '../../common/SectionIntro/SectionIntro';
+import SectionIntro from '../SectionIntro/SectionIntro';
 
 const Hero = ({ heading, paragraph, buttonText }) => {
   return (
