@@ -4,7 +4,7 @@ import SectionIntro from "../../common/SectionIntro/SectionIntro";
 import { Twitter } from "lucide-react";
 
 import team1 from "../../../assets/images/team1.jpeg";
-import team2 from "../../../assets/images/team2.png";
+import team2 from "../../../assets/images/team2.jpeg";
 import team3 from "../../../assets/images/team3.png";
 
 const teamMembers = [
@@ -14,8 +14,8 @@ const teamMembers = [
       image: team1,
     },
     {
-      name: "Albert Flores",
-      role: "Founder & CEO",
+      name: "Sami Ullah",
+      role: "Product Developer & CTO",
       image: team2,
     },
     {
