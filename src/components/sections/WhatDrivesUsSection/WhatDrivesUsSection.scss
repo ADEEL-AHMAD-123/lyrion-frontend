@@ -1,0 +1,32 @@
+@use '../../../styles/base/variables' as *;
+@use '../../../styles/base/mixins' as *;
+
+.what-drives-us-section {
+  position: relative;
+  background-color: $color-primary;
+  color: $color-text-light;
+  padding:0;
+  text-align: center;
+  overflow: hidden;
+
+  .background-layer {
+    @include pattern-background;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+
+    @include mobile {
+      width: 90%;
+    }
+  }
+
+  .drive-cards {
+    margin-top: -$spacing-2xl;
+  }
+}

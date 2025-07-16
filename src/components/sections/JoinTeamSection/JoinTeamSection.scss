@@ -1,0 +1,146 @@
+@use "../../../styles/base/variables" as *;
+@use "../../../styles/base/mixins" as *;
+
+.join-team-section {
+  background-color: $color-primary;
+  color: $color-text-light;
+  padding:  0;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+
+  .background-layer {
+    @include pattern-background;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+    position: relative;
+    z-index: 1;
+  }
+
+  .tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: $spacing-xs;
+    margin-bottom: $spacing-2xl;
+
+    .tab-btn {
+      padding: 0.3rem 0.9rem;
+      font-size: $font-size-xs;
+      background-color: rgba($color-accent-purple, 0.2);
+      border-radius: $radius-full;
+      color: $color-text-light;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &.active {
+        border: 0.1px solid rgba($color-text-light, 0.5);
+      }
+
+      &:hover {
+        background-color: rgba($color-white, 0.08);
+      }
+    }
+  }
+
+  .jobs-grid {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xl;
+    margin-bottom: $spacing-3xl;
+    width: 35%;
+    margin-inline: auto;
+
+    @include tablet {
+      width: 85%;
+    }
+
+    @include mobile {
+      width: 95%;
+    }
+
+    .job-card {
+      background: $color-cards-bg;
+      border: 1px solid rgba($color-white, 0.06);
+      border-radius: $radius-md;
+      padding: $spacing-lg;
+      text-align: left;
+
+      .top-row {
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        color: $color-text-light;
+        margin-bottom: $spacing-xs;
+    
+      }
+
+      .title-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: $spacing-xs;
+      
+        
+
+        .job-title {
+          font-size: 1.1rem;
+          font-weight: $font-weight-semibold;
+          color: $color-white;
+        }
+
+        .salary {
+          font-size: 0.9rem;
+          font-weight: $font-weight-regular;
+          color: $color-white;
+        }
+      }
+
+      .job-description {
+        font-size: 12px;
+        color: rgba($color-text-light, 0.85);
+        line-height: 1.5;
+        margin-bottom: $spacing-md;
+      }
+
+      .card-buttons {
+        display: flex;
+        gap: $spacing-xs;
+
+        .apply-btn {
+          padding: 0.4rem 0.9rem;
+          font-size: 11px;
+
+        }
+
+        .details-btn {
+          background-color: transparent;
+          color: $color-text-light;
+          font-size: 11px;
+          padding: 0.4rem 0.9rem;
+          border-radius: $radius-sm;
+          border: none;
+          box-shadow: none;
+          cursor: pointer;
+
+          &:hover {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+
+}

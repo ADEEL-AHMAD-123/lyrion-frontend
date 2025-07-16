@@ -4,6 +4,11 @@ import logoSplit from "../../assets/images/logo-cropped.png";
 import { MessageSquare, Bot, BarChart3, Globe, ShoppingCart } from "lucide-react";
 import Hero from "../../components/common/Hero/Hero";
 import MissionVisionSection from "../../components/sections/MissionVisionSection/MissionVisionSection";
+import WhatDrivesUsSection from "../../components/sections/WhatDrivesUsSection/WhatDrivesUsSection";
+import TeamSection from "../../components/sections/TeamSection/TeamSection";
+import JoinTeamSection from "../../components/sections/JoinTeamSection/JoinTeamSection";
+import TestimonialsSection from '../../components/sections/TestimonialsSection/TestimonialsSection'
+import CTA from '../../components/sections/CTA/CTA'
 
 const aboutHeroContent = {
   heading: "About Lyrion AI",
@@ -92,6 +97,11 @@ const AboutPage = () => {
         </div>
       </section>
       <MissionVisionSection/>
+      <WhatDrivesUsSection/>
+      <TeamSection/>
+      <JoinTeamSection/>
+      <TestimonialsSection/>
+      {/* <CTA/> */}
     </>
   );
 };
