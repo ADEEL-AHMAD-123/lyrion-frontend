@@ -3,13 +3,13 @@ import "./TeamSection.scss";
 import SectionIntro from "../../common/SectionIntro/SectionIntro";
 import { Twitter } from "lucide-react";
 
-import team1 from "../../../assets/images/team1.png";
+import team1 from "../../../assets/images/team1.jpeg";
 import team2 from "../../../assets/images/team2.png";
 import team3 from "../../../assets/images/team3.png";
 
 const teamMembers = [
     {
-      name: "Jane Cooper",
+      name: "Aman Thand",
       role: "Founder & CEO",
       image: team1,
     },
