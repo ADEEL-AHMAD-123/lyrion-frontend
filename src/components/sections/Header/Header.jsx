@@ -26,7 +26,7 @@ const Header = () => {
           <ul>
             <li><Link to="/" onClick={closeMenu}>Home</Link></li>
             <li><Link to="/about" onClick={closeMenu}>About</Link></li>
-            {/* <li><Link to="/features" onClick={closeMenu}>Features</Link></li> */}
+            <li><Link to="/features" onClick={closeMenu}>Features</Link></li>
             <li><Link to="/templates" onClick={closeMenu}>Templates</Link></li>
             <li
               className={`has-submenu ${isSubmenuOpen ? 'open' : ''}`}
@@ -43,7 +43,7 @@ const Header = () => {
             </li>
             <li><Link to="/pricing" onClick={closeMenu}>Pricing</Link></li>
             <li><Link to="/contact" onClick={closeMenu}>Contact</Link></li>
-            <li><Link to="/signin" onClick={closeMenu}>Sign In</Link></li>
+            {/* <li><Link to="/signin" onClick={closeMenu}>Sign In</Link></li> */}
           </ul>
         </nav>
 

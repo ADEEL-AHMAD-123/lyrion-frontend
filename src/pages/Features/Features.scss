@@ -1,0 +1,47 @@
+@use '../../styles/base/variables' as *;
+@use '../../styles/base/mixins' as *;
+
+.features-banner-section {
+  position: relative;
+  background-color: $color-primary;
+  padding: $spacing-sm;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  .background-layer {
+    @include pattern-background;
+  }
+
+  .image-wrapper {
+    position: relative;
+    z-index: 1;
+    width: 90%;
+    max-width: 100vw;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: $radius-lg;
+      box-shadow: $shadow-card;
+      display: block;
+    }
+
+    @include tablet {
+      width: 90%;
+    }
+
+    @include mobile {
+      width: 90%;
+    }
+  }
+
+  @include tablet {
+    padding: $spacing-2xl 0;
+  }
+
+  @include mobile {
+    padding: 0 $spacing-xxs;
+  }
+}
