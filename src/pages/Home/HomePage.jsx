@@ -1,17 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import Hero from "../../components/common/Hero/Hero";
 import EmpowerSection from "../../components/sections/EmpowerSection/EmpowerSection";
 import "./HomePage.scss";
-import howItWorksImg from '../../assets/images/How_its_work.png';
-import audienceImg from "../../assets/images/who_its_for.png";
+import howItWorksImg from "../../assets/images/How_its_work.png";
+import centerImg from "../../assets/images/who_its_for_pattern.png";
 import glowImg from "../../assets/images/glows.png";
 import mockupImg from "../../assets/images/Mockup.png";
+import audienceImg from "../../assets/images/Group 186 copy.svg";
 import VisualBuilderSection from "../../components/sections/VisualBuilderSection/VisualBuilderSection";
 import StartTemplatesSection from "../../components/sections/StartTemplatesSection/StartTemplatesSection";
 import HomePricingSection from "../../components/sections/HomePricingSection/HomePricingSection";
-import TestimonialsSection from "../../components/sections/TestimonialsSection/TestimonialsSection"
+import TestimonialsSection from "../../components/sections/TestimonialsSection/TestimonialsSection";
 import FaqSection from "../../components/sections/FaqSection/FaqSection";
+import SectionIntro from "../../components/common/SectionIntro/SectionIntro";
+import WhoItIsForSection from "../../components/sections/WhoItIsForSection/WhoItIsForSection";
+import HowItWorksSection from "../../components/sections/HowItWorksSection/HowItWorksSection";
+
 const HomePage = () => {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  const handleTouch = () => {
+    setIsFlipped(true);
+    setTimeout(() => setIsFlipped(false), 1000);
+  };
+
   return (
     <>
       <Hero
@@ -20,32 +32,25 @@ const HomePage = () => {
         buttonText="Get Started"
       />
 
-      {/* Mockup specific to homepage */}
-      <div className="hero-mockup-wrapper">
-      <div className="background-layer" />
+      {/* Homepage Mockup */}
+      <div
+        className={`hero-mockup-wrapper ${isFlipped ? "active" : ""}`}
+        onTouchStart={() => {
+          setIsFlipped(true);
+          setTimeout(() => setIsFlipped(false), 1000);
+        }}
+      >
         <img src={mockupImg} alt="mockup" className="mockup" />
       </div>
 
       <EmpowerSection />
-
-      <section className="who-it-is-for-section">
-      <div className="background-layer" />
-        <div className="image-wrapper">
-          <img src={audienceImg} alt="Who it's for" />
-        </div>
-      </section>
-
-      <section className="how-it-works-section">
-      <div className="background-layer" />
-        <div className="image-wrapper">
-          <img src={howItWorksImg} alt="How it works" />
-        </div>
-      </section>
-      <VisualBuilderSection/>
+      <WhoItIsForSection />
+      <HowItWorksSection />
+      <VisualBuilderSection />
       <StartTemplatesSection />
-      <HomePricingSection/>
-      <TestimonialsSection/>
-      <FaqSection/>
+      <HomePricingSection />
+      <TestimonialsSection />
+      <FaqSection />
     </>
   );
 };

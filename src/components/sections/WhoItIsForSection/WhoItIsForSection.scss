@@ -1,0 +1,85 @@
+@use '../../../styles/base/variables' as *;
+@use '../../../styles/base/mixins' as *;
+
+.who-it-is-for-section {
+    @include pattern-background; 
+    padding: $spacing-2xl 0;
+    position: relative;
+    text-align: center;
+    background-blend-mode: normal;
+    background-color: $color-primary;
+    z-index: 1;
+  
+    .section-content {
+      position: relative;
+      z-index: 2; 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 $spacing-md;
+    }
+  
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: $color-text-light;
+      margin-bottom: 1rem;
+  
+      @include mobile {
+        margin-bottom: 0rem;
+        font-size: 1.8rem;
+      }
+    }
+  
+    p {
+      font-size: 1.1rem;
+      color: $color-text-light;
+      max-width: 700px;
+      margin: 0 auto $spacing-xl;
+  
+      @include mobile {
+        font-size: 0.8rem;
+        margin: 0 $spacing-xs;
+        margin-bottom: auto;
+      }
+    }
+  
+    .images-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 1000px;
+      @include mobile {
+         margin-top: 1rem;
+      }
+      
+  
+      .main-image {
+        width: 100%;
+        height: auto;
+        border-radius: $radius-lg;
+        box-shadow: $shadow-card;
+        display: block;
+      }
+  
+      .center-image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 130px;
+        height: auto;
+        z-index: 3;
+        @include tablet {
+            width: 90px;
+          }
+        @include mobile {
+          width: 40px;
+        }
+        
+      }
+    }
+  
+
+  
+  }
+  
